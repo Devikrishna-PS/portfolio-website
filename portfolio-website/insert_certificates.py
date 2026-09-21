@@ -34,7 +34,7 @@ certificates = [
 
     ("Academic Topper – Three Consecutive Semesters",
      "Secured the top position in B.Tech Computer Science & Engineering for three consecutive semesters.",
-     "Academic Topper -Certificate.pdf")
+     "AcademicTopper-Certificate.pdf")
 ]
 
 cursor.executemany("""
