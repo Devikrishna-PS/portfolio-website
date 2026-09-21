@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Devikrishna P S</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo">DK</div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('projects') }}">Projects</a></li>
+        <li><a href="{{ url_for('certificates') }}">Certificates</a></li>
+        <li><a href="{{ url_for('contact') }}" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+<section class="contact-section">
+
+  <h1>Get In Touch</h1>
+
+  <p class="contact-text">
+    I'm always open to learning opportunities, internships, collaborations,
+    and connecting with fellow students and professionals.
+  </p>
+
+  <!-- Contact Information -->
+  <div class="contact-info">
+
+    <div class="contact-item">
+      <h3>Email</h3>
+      <a href="mailto:devu47301@gmail.com">devu47301@gmail.com</a>
+    </div>
+
+    <div class="contact-item">
+      <h3>Phone</h3>
+      <p>+91 9074606200</p>
+    </div>
+
+    <div class="contact-item">
+      <h3>Location</h3>
+      <p>Thrissur, Kerala, India</p>
+    </div>
+
+    <div class="contact-item">
+      <h3>GitHub</h3>
+      <a href="https://github.com/Devikrishna-PS" target="_blank">
+        github.com/Devikrishna-PS
+      </a>
+    </div>
+
+    <div class="contact-item">
+      <h3>LinkedIn</h3>
+      <a href="https://www.linkedin.com/in/devikrishna-p-s-580320338?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">
+        Devikrishna P S
+      </a>
+    </div>
+
+  </div>
+   {% if success %}
+<div class="success-message">
+  ✅ Thank you! Your message has been sent successfully.
+</div>
+{% endif %}
+  <!-- Contact Form -->
+  <form action="{{ url_for('contact') }}" method="POST" class="contact-form">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+
+    <input type="email" name="email" placeholder="Your Email" required>
+
+    <input type="text" name="subject" placeholder="Subject" required>
+
+    <textarea name="message" rows="6"
+      placeholder="Write your message..." required></textarea>
+
+    <button type="submit" class="btn">
+      Send Message
+    </button>
+
+  </form>
+
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <h3>Devikrishna P S</h3>
+    <p>Computer Science & Engineering Student</p>
+
+    <p class="copyright">
+      © 2026 Devikrishna P S. All Rights Reserved.
+    </p>
+  </footer>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

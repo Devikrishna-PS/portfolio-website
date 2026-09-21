@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificates | Devikrishna P S</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo">DK</div>
+    
+    <nav>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('projects') }}">Projects</a></li>
+        <li><a href="{{ url_for('certificates') }}" class="active">Certificates</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Certificates Heading -->
+  <section class="page-title">
+    <h1>My Certifications</h1>
+    <p>
+      A collection of certifications, workshops, internships, and technical learning
+      experiences completed during my academic journey.
+    </p>
+  </section>
+
+  <!-- Certificates -->
+  <section class="certificates-section">
+
+    <div class="certificate-grid">
+ <section class="certificates-section">
+
+  <div class="certificate-grid">
+
+    {% for certificate in certificates %}
+
+    <div class="certificate-card">
+      <div class="certificate-content">
+
+        <h3>{{ certificate["name"] }}</h3>
+
+        <p>{{ certificate["description"] }}</p>
+
+        <a href="{{ url_for('static', filename='certificates/' + certificate['pdf']) }}"
+           target="_blank"
+           class="btn-small">
+          View Certificate
+        </a>
+
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </div>
+
+</section>
+      
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <h3>Devikrishna P S</h3>
+    <p>Computer Science & Engineering Student | Cloud Computing | AI | Software Development</p>
+
+    <div class="footer-links">
+      <a href="https://github.com/Devikrishna-PS" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/devikrishna-p-s-580320338?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">LinkedIn</a>
+      <a href="mailto:devu47301@gmail.com">Email</a>
+    </div>
+
+    <p class="copyright">© 2026 Devikrishna P S. All Rights Reserved.</p>
+  </footer>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

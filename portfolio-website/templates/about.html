@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Devikrishna P S</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <h2 class="logo">DK</h2>
+
+    <ul class="nav-links">
+  <li><a href="{{ url_for('home') }}">Home</a></li>
+  <li><a href="{{ url_for('about') }}"class="active">About</a></li>
+  <li><a href="{{ url_for('projects') }}">Projects</a></li>
+  <li><a href="{{ url_for('certificates') }}">Certificates</a></li>
+  <li><a href="{{ url_for('contact') }}">Contact</a></li>
+</ul>
+  </nav>
+</header>
+
+<section class="page-title">
+  <h1>About Me</h1>
+  <p>Get to know me, my education, skills and interests.</p>
+</section>
+
+<section class="about-section">
+
+  <div class="about-card">
+    <h2>Who Am I?</h2>
+
+    <p>
+      Hello! I'm <strong>Devikrishna P S</strong>, a Computer Science Engineering student at
+      Jyothi Engineering College, Thrissur.
+    </p>
+
+    <p>
+    I am a Engineering student who is passionate about learning, creating, and solving problems through technology. I enjoy exploring new technologies and building practical projects that help me improve my technical skills.
+
+    I believe in continuous learning, creativity, and teamwork, and I always strive to grow both personally and professionally. Beyond academics, I enjoy drawing and painting, which reflect my creative side and attention to detail.
+
+    </p>
+  </div>
+
+  <div class="about-card">
+    <h2>Education</h2>
+
+    <div class="timeline-item">
+      <h3>B.Tech Computer Science Engineering</h3>
+      <p>Jyothi Engineering College, Thrissur</p>
+      <span>2024 – 2028</span>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Higher Secondary Education</h3>
+      <p>GHSS Varavoor</p>
+      <span>96.75%</span>
+    </div>
+  </div>
+
+  <div class="about-card">
+    <h2>Technical Skills</h2>
+
+    <div class="skill-container">
+      <div class="skill-card">HTML</div>
+      <div class="skill-card">CSS</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">Python</div>
+      <div class="skill-card">Java</div>
+      <div class="skill-card">SQL</div>
+      <div class="skill-card">Cloud Computing</div>
+      <div class="skill-card">GitHub</div>
+    </div>
+  </div>
+
+  <div class="about-card">
+    <h2>Internships</h2>
+
+    <ul class="internship-list">
+      <li>AI & Machine Learning Internship — SRAI Smart Solutions.</li>
+      <li>QA Testing Internship — ERA LLP.</li>
+      <li>Full Stack Development Internship — KGISL MicroCollege.</li>
+      <li>Full Stack Development Internship — Thiranex<li>
+    </ul>
+  </div>
+
+  <div class="about-card">
+    <h2>Areas of Interest</h2>
+
+    <div class="interest-grid">
+      <div class="interest">Cloud Computing</div>
+      <div class="interest">Artificial Intelligence</div>
+      <div class="interest">Web Development</div>
+      <div class="interest">Data Analytics</div>
+      <div class="interest">UI/UX Design</div>
+      <div class="interest">Data Science & Analytics</div>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 Devikrishna P S. All Rights Reserved.</p>
+</footer>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
